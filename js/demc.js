@@ -3,6 +3,6 @@ window.addEventListener("load", async () => {
 
 	if (target) {
 		target.remove();
-		ledocument.getElementsByTagName("html")[0].style.overflow = "scroll";
+		document.getElementsByTagName("html")[0].style.overflow = "scroll";
 	}
 });
