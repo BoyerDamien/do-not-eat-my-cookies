@@ -1,0 +1,20 @@
+{
+	"name": "Do-not-eat-my-cookies",
+	"description": "Simple extension that automatically blocks cookies requests from didomi",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["js/demc.js"]
+		}
+	],
+	"permissions": ["storage", "activeTab", "scripting"],
+	"action": {
+		"default_icon": "img/cookie.png"
+	},
+	"offline_enabled": true
+}
